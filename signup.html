@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--font-awesome-->
+    <script
+      src="https://kit.fontawesome.com/3a3f095a16.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Music Project Sign Up</title>
+
+    <style>
+ #content_login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(bg2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.container span::after{
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: url(bg2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+}
+
+form .inputBox input[type="submit"] {
+  background: #FC893A;
+  font-weight: 600;
+  cursor: pointer;
+   border-radius: 40px;
+   height: 40px;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+  /*background: #00FFFF;*/
+  box-shadow: 0 5px 25px rgb(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.5s;
+  overflow: hidden;
+}
+    </style>
+  </head>
+ 
+  <body>
+    <div  id="content_login">
+        <div class="container">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <form method="post" id="signinForm">
+               <h2>Sign Up</h2>
+               <div class="inputBox inputControl">
+                <input type="text" id="userName" name="user_name" placeholder="Enter your user name..."> 
+                <div id="confirmPasswordError" class="error"></div>
+              </div> 
+
+               <div class="inputBox inputControl">
+                 <input type="text" id="email" name="user_email" placeholder="Enter your email address..."> 
+                 <div id="confirmPasswordError" class="error"></div>
+                </div>
+
+                <div class="inputBox inputControl">
+                    <input type="password" id="password" name="user_password" placeholder="Enter your password">
+                    <div id="confirmPasswordError" class="error"></div>
+                </div>
+
+                <div class="inputBox inputControl">
+                  <input type="password" id="confirmPassword" name="user_re_password" placeholder="Confirm password">
+                  <div id="confirmPasswordError" class="error"></div>
+               </div>
+
+                <div class="inputBox">
+                    <input type="submit" value="sign up">
+                </div>
+
+                <div class="checkbox">
+                  <input type="checkbox" id="rememberMe">
+                  <label for="rememberMe">Remember Me</label>
+              </div>
+
+                <div class="group">
+                  <p>Have an account?</p>
+                  <a href="log.html" id="signup">Login</a>
+              </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="right_bx1">
+       <!--<h3>Incorrect Password</h3>-->
+       
+    </div>
+  </body>
+</html>

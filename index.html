@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--font-awesome-->
+    <script
+      src="https://kit.fontawesome.com/3a3f095a16.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+    <title>Music Project</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu_side">
+        <div class="menu_side_content">
+          <a href="index.html"><h3 id="mobile">Unique Sounds</h3></a>
+
+          <div class="user_icon">
+            <ul>
+              <li>
+                <h4>
+                  <a href="login.html"
+                    ><i class="fa-solid fa-circle-user"></i> Log in /</a
+                  >
+                  <a href="signup.html">Sign Up</a>
+                </h4>
+              </li>
+            </ul>
+          </div>
+
+          <div class="playlist">
+            <h4 class="active">
+              <span></span><i class="fa-solid fa-music"></i>
+              <p>Playlist</p>
+            </h4>
+            <h4><span></span><i class="fa-solid fa-music"></i> Last Played</h4>
+            <h4><span></span><i class="fa-solid fa-music"></i> Recommended</h4>
+          </div>
+
+          <div class="playlist_row">
+            <h3>Music</h3>
+            <ul>
+              <li>
+                <a href="trending.html"
+                  ><i class="fa-solid fa-fire-flame-curved"></i> Trending</a
+                >
+              </li>
+              <li>
+                <a href="trending.html"><i class="fa-solid fa-bomb"></i> New</a>
+              </li>
+              <li>
+                <a href="trending.html"
+                  ><i class="fa-solid fa-star"></i> popular songs</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="bi bi-music-note-list"></i> User's choice</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-heart"></i>Popular Artist</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu_song">
+            <li class="songItem">
+              <span>01</span>
+              <img src="img/1.jpg" alt="" />
+              <div>
+                <h5>On My Way<br /></h5>
+                <div class="artistname"></div>
+              </div>
+              <i class="plaListplay fa-solid fa-circle-play" id="1"></i>
+            </li>
+
+            <li class="songItem">
+              <span>02</span>
+              <img src="img/2.jpg" alt="" />
+              <div>
+                <h5>On My Way<br /></h5>
+                <div class="artistname"></div>
+              </div>
+              <i class="plaListplay fa-solid fa-circle-play" id="2"></i>
+            </li>
+
+            <li class="songItem">
+              <span>03</span>
+              <img src="img/2.jpg" alt="" />
+              <div>
+                <h5>On My Way<br /></h5>
+                <div class="artistname"></div>
+              </div>
+              <i class="plaListplay fa-solid fa-circle-play" id="3"></i>
+            </li>
+
+            <li class="songItem">
+              <span>04</span>
+              <img src="img/2.jpg" alt="" />
+              <div>
+                <h5>On My Way<br /></h5>
+                <div class="artistname"></div>
+              </div>
+              <i class="plaListplay fa-solid fa-circle-play" id="4"></i>
+            </li>
+
+            <li class="songItem">
+              <span>05</span>
+              <img src="img/2.jpg" alt="" />
+              <div>
+                <h5>On My Way<br /></h5>
+                <div class="artistname"></div>
+              </div>
+              <i class="plaListplay fa-solid fa-circle-play" id="5"></i>
+            </li>
+
+            <li class="songItem">
+              <span>06</span>
+              <img src="img/2.jpg" alt="" />
+              <div>
+                <h5>On My Way<br /></h5>
+                <div class="artistname"></div>
+              </div>
+              <i class="plaListplay fa-solid fa-circle-play" id="6"></i>
+            </li>
+
+            <li class="songItem" id="last_song">
+              <span>07</span>
+              <img src="img/2.jpg" alt="" />
+              <div>
+                <h5>On My Way<br /></h5>
+                <div class="artistname"></div>
+              </div>
+              <i class="plaListplay fa-solid fa-circle-play" id="7"></i>
+            </li>
+          </div>
+        </div>
+      </div>
+
+      <div class="song_side">
+        <nav>
+          <!----<ul>
+            <li>Unique Sounds <span></span></li>
+            <li>MY LIBRARY <span></span></li>
+            <li>RADIO <span></span></li>
+          </ul>-->
+
+          <h3 class="mobile">Unique Sounds</h3>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Music..." />
+
+            <div class="search_results"></div>
+          </div>
+
+          <span class="menu"> <i class="fa-solid fa-bars"></i> </span>
+        </nav>
+
+        <!--Popular Songs Slider-->
+        <div class="song_side_content">
+          <div class="popular_song popular_artists">
+            <div class="h4">
+              <h4><i class="fa-solid fa-star"></i> Popular Songs</h4>
+              <div class="btn_s">
+                <i class="fa-solid fa-arrow-left" id="pop_artists_left"></i>
+                <i class="fa-solid fa-arrow-right" id="pop_artists_right"></i>
+              </div>
+            </div>
+
+            <div class="pop_song Artists_box item">
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/20.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="8"></i>
+                </div>
+                <h5>On My Way <br /></h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="9"></i>
+                </div>
+
+                <h5>On My Way <br /></h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="10"></i>
+                </div>
+
+                <h5>On My Way <br /></h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="11"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="12"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="13"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="14"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="15"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="16"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="17"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="18"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="19"></i>
+                </div>
+
+                <h5>
+                  On My Way
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="20"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                </div>
+
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+                <div class="artistname"></div>
+              </li>
+            </div>
+          </div>
+
+          <!--Popular Artsist Slider-->
+          <div class="popular_artists">
+            <div class="h4">
+              <h4><i class="fa-solid fa-heart"></i> Popular Artists</h4>
+              <div class="btn_s">
+                <i class="fa-solid fa-arrow-left" id="pop_artists_left"></i>
+                <i class="fa-solid fa-arrow-right" id="pop_artists_right"></i>
+              </div>
+            </div>
+
+            <div class="item Artists_box">
+              <li>
+                <a href="davido.html"><img src="img/obo.jpg" alt="" /></a>
+              </li>
+
+              <li>
+                <img src="img/burna.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/tiwa.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/wizkid.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/rema.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/terms.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/tenny.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/psqare.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/don jazzy.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/simi.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/kizz daniel.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/aryastar.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/joeboy.jpg" alt="" />
+              </li>
+              -
+            </div>
+          </div>
+
+          <div class="popular_artists">
+            <div class="h4">
+              <h4><i class="fa-solid fa-fire-flame-curved"></i> Trending</h4>
+              <div class="btn_s">
+                <i class="fa-solid fa-arrow-left" id="trending_left"></i>
+                <i class="fa-solid fa-arrow-right" id="trending_right"></i>
+              </div>
+            </div>
+
+            <div class="item Artists_box">
+              <li>
+                <div class="pop_play">
+                  <img src="img/chris brown.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/rihanna.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>55.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/akon.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>43.2m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/nicky.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>27.7m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/cardi b.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>17.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/beyounce.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>117.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/justin.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/alicia keys.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/eminem.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>22.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/ed sheeran.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>11.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/selena gomez.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>56.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/john legend.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>67.3m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/bruno mars.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>89.5m</h3>
+                </div>
+              </li>
+              -
+            </div>
+          </div>
+
+          <div class="popular_artists">
+            <div class="h4">
+              <h4>
+                <i class="fa-solid fa-fire-flame-curved"></i> Trending Gospel
+              </h4>
+              <div class="btn_s">
+                <i class="fa-solid fa-arrow-left" id="pop_artists_left"></i>
+                <i class="fa-solid fa-arrow-right" id="pop_artists_right"></i>
+              </div>
+            </div>
+
+            <div class="item Artists_box">
+              <li>
+                <div class="pop_play">
+                  <img src="img/don moen.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/mercy chinwo.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/frank.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/sinach.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/ada.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/lara.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/chioma Jesus.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/franklin.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/cece.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/marvin.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/judy.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/amy.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/yolanda.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+            </div>
+          </div>
+
+          <div class="popular_artists">
+            <div class="h4">
+              <h4><i class="fa-solid fa-bomb"></i>New</h4>
+
+              <div class="btn_s">
+                <i class="fa-solid fa-arrow-left" id="pop_artists_left"></i>
+                <i class="fa-solid fa-arrow-right" id="pop_artists_right"></i>
+              </div>
+            </div>
+
+            <div class="item Artists_box">
+              <li>
+                <img src="img/tenny.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/psqare.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/don jazzy.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/simi.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/kizz daniel.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/aryastar.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/joeboy.jpg" alt="" />
+              </li>
+
+              <li>
+                <a href="davido.html"><img src="img/obo.jpg" alt="" /></a>
+              </li>
+
+              <li>
+                <img src="img/burna.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/tiwa.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/wizkid.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/rema.jpg" alt="" />
+              </li>
+
+              <li>
+                <img src="img/terms.jpg" alt="" />
+              </li>
+            </div>
+          </div>
+
+          <div class="popular_artists">
+            <div class="h4">
+              <h4><i class="fa-solid fa-fire-flame-curved"></i> Hotlist</h4>
+              <div class="btn_s">
+                <i class="fa-solid fa-arrow-left" id="trending_left"></i>
+                <i class="fa-solid fa-arrow-right" id="trending_right"></i>
+              </div>
+            </div>
+
+            <div class="item Artists_box">
+              <li>
+                <div class="pop_play">
+                  <img src="img/justin.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/alicia keys.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/eminem.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>22.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/ed sheeran.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>11.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/selena gomez.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>56.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/john legend.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>67.3m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/bruno mars.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>89.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/chris brown.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/rihanna.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>55.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/akon.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>43.2m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/nicky.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>27.7m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/cardi b.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>17.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/beyounce.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+                  <h3><i class="fa-solid fa-headphones"></i>117.5m</h3>
+                </div>
+              </li>
+            </div>
+          </div>
+
+          <div class="popular_artists">
+            <div class="h4">
+              <h4>
+                <i class="fa-solid fa-fire-flame-curved"></i> Top Gospel Songs
+              </h4>
+              <div class="btn_s">
+                <i class="fa-solid fa-arrow-left" id="pop_artists_left"></i>
+                <i class="fa-solid fa-arrow-right" id="pop_artists_right"></i>
+              </div>
+            </div>
+
+            <div class="item Artists_box">
+              <li>
+                <div class="pop_play">
+                  <img src="img/amy.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/yolanda.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/don moen.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/mercy chinwo.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/frank.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/sinach.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/ada.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/lara.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/chioma Jesus.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/franklin.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/cece.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/marvin.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="pop_play">
+                  <img src="img/judy.jpg" alt="" />
+                  <i class="plaListplay fa-solid fa-circle-play" id="21"></i>
+
+                  <h3><i class="fa-solid fa-headphones"></i>7.5m</h3>
+                </div>
+              </li>
+              -
+            </div>
+          </div>
+
+          <!--Footer-->
+          <footer>
+            <div class="col">
+              <h4>Contact</h4>
+              <a href="">Contact/support</a>
+              <a href="">About</a>
+              <a href="">Blog</a>
+              <a href="">FAQ</a>
+            </div>
+
+            <div class="col">
+              <h4>Browse</h4>
+              <a href="">Home</a>
+              <a href="">Trending</a>
+              <a href="">Top Songs</a>
+              <a href="">Playlist</a>
+            </div>
+
+            <div class="col">
+              <h4>Resources</h4>
+              <a href="">Legal & DMCA</a>
+              <a href="">Privacy Policy</a>
+              <a href="">Terms of Service</a>
+              <a href="">Guide</a>
+              <a href="">Help</a>
+            </div>
+
+            <div class="col">
+              <h4>Help Desk</h4>
+              <a href="">Download</a>
+              <a href="">Help Center</a>
+              <a href="">Premium</a>
+              <a href="">Buzz</a>
+            </div>
+
+            <div class="last_col">
+              <h4>Install App</h4>
+              <p>From App Store or Google Player</p>
+              <div class="button-container">
+                <button class="button">
+                  <i class="fa-brands fa-apple fa-beat-fade fa-2xl"></i>App
+                  Store
+                </button>
+                <button class="button">
+                  <i class="fa-brands fa-google-play fa-beat-fade fa-2xl"></i
+                  >Google Play
+                </button>
+              </div>
+
+              <div class="link">
+                <ul>
+                  <li>
+                    <a href="">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="copyright">
+              <p>@ 2023 Unique Sounds</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <!--Master play-->
+      <div class="master_play" id="laptop-view">
+      
+          <img src="img/21.jpg" alt="" id="poster_master_play" />
+          <h5 id="title">
+            Sia
+            <div class="artistname">Soon be found</div>
+          </h5>
+       
+
+        <div class="icon">
+          <i class="shuffle fa-solid fa-music">next</i>
+          <i class="fa-solid fa-backward-step" id="back"></i>
+          <i class="fa-solid fa-play" id="masterPlay"></i>
+          <i class="fa-solid fa-forward-step" id="next"></i>
+          <a href="" download id="download_music"
+            ><i class="fa-solid fa-cloud-arrow-down"></i
+          ></a>
+        </div>
+
+        <span id="currentStart">0:00</span>
+
+        <div class="bar">
+          <input type="range" id="seek" min="0" max="100" />
+          <div class="bar2" id="bar2"></div>
+          <div class="dot"></div>
+        </div>
+
+        <span id="currentEnd">0:30</span>
+        <div class="vol">
+          <i class="fa-solid fa-volume-high" id="vol_icon"></i>
+          <input type="range" min="0" max="100" id="vol" />
+          <div class="vol_bar"></div>
+          <div class="dot" id="vol_dot"></div>
+        </div>
+      </div>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>
